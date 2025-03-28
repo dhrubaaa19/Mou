@@ -1,62 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    background: #0d0d0d;
     color: white;
     text-align: center;
+    margin: 0;
+    padding: 20px;
 }
 
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-}
-
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-h1 {
-    font-size: 42px;
+header h1 {
+    font-size: 36px;
+    font-weight: 600;
     background: linear-gradient(90deg, #ff416c, #ff4b2b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px rgba(255, 75, 43, 0.5);
 }
 
-p {
-    font-size: 20px;
-    opacity: 0.8;
-}
-
-.cta {
-    display: inline-block;
+.property-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     margin-top: 20px;
-    padding: 15px 30px;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b);
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 75, 43, 0.8);
-    transition: transform 0.3s ease;
 }
 
-.cta:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 25px rgba(255, 75, 43, 0.9);
+.property-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(255, 75, 43, 0.4);
+    cursor: pointer;
+}
+
+.property-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 0px 20px rgba(255, 75, 43, 0.8);
+}
+
+.property-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+#threeD-container {
+    margin-top: 30px;
+    height: 400px;
 }
