@@ -7,14 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="bg"></canvas>
+    <header>
+        <h1>🏡 Find Your Dream Home</h1>
+        <p>Explore properties in an immersive 3D experience</p>
+    </header>
     
-    <div class="content">
-        <h1>Explore Your Dream Home 🏡</h1>
-        <p>Interact with a 3D house and experience real estate like never before.</p>
-        <a href="#" class="cta">View Listings</a>
-    </div>
+    <section class="property-list">
+        <div class="property-card" onclick="open3DModel('house1')">
+            <img src="house1.jpg" alt="Luxury Villa">
+            <h3>Luxury Villa</h3>
+            <p>$2,500,000 | 5 Beds | 4 Baths</p>
+        </div>
+        <div class="property-card" onclick="open3DModel('house2')">
+            <img src="house2.jpg" alt="Modern Apartment">
+            <h3>Modern Apartment</h3>
+            <p>$750,000 | 3 Beds | 2 Baths</p>
+        </div>
+        <div class="property-card" onclick="open3DModel('house3')">
+            <img src="house3.jpg" alt="Beach House">
+            <h3>Beachfront House</h3>
+            <p>$3,200,000 | 6 Beds | 5 Baths</p>
+        </div>
+    </section>
 
-    <script type="module" src="script.js"></script>
+    <section id="threeD-container">
+        <canvas id="threeD-canvas"></canvas>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
