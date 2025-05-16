@@ -96,10 +96,24 @@
   <p>Get ready for a special surprise crafted just for you.</p>
   <button id="startBtn">Surprise 🥳</button>
 
+  
+  <!-- Audio files: Replace paths with your actual audio files -->
+  <audio id="bgMusic" src="soundsstory-music.mp3" autoplay loop></audio>
+  <audio id="flipSound" src="soundspage-flip.mp3"></audio>
+
   <script>
     document.getElementById('startBtn').addEventListener('click', () => {
       window.location.href = 'puzzle.html';
     });
+    // Play bg music on first user interaction
+    document.addEventListener('click', () => {
+      const bgMusic = document.getElementById('bgMusic');
+      if (bgMusic.paused) {
+        bgMusic.play().catch(() => {});
+      }
+    }, { once: true });
+
+    updateControls();
   </script>
 </body>
 </html>
