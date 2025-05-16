@@ -65,6 +65,11 @@
 
 <div id="puzzleContainer"></div>
 
+  
+  <!-- Audio files: Replace paths with your actual audio files -->
+  <audio id="bgMusic" src="soundsstory-music.mp3" autoplay loop></audio>
+  <audio id="flipSound" src="soundspage-flip.mp3"></audio>
+
 <script>
   const container = document.getElementById('puzzleContainer');
   let clickCount = 0;
@@ -110,6 +115,15 @@
       }, 2000);
     }
   });
+  // Play bg music on first user interaction
+    document.addEventListener('click', () => {
+      const bgMusic = document.getElementById('bgMusic');
+      if (bgMusic.paused) {
+        bgMusic.play().catch(() => {});
+      }
+    }, { once: true });
+
+    updateControls();
 </script>
 
 </body>
