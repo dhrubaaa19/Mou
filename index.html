@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Happy Birthday Mou 💖</title>
+  <style>
+    /* Full screen baby pink background */
+    html, body {
+      height: 100%;
+      margin: 0; padding: 0;
+      background-color: #ffccd5; /* baby pink */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #b30059;
+      text-align: center;
+      user-select: none;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Background GIF overlay */
+    .bg-gif {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: url('imagesheart-bg.gif') center center / cover no-repeat;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+      filter: brightness(1) saturate(1);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3em;
+      letter-spacing: 0.05em;
+      z-index: 1;
+      position: relative;
+      text-shadow: 0 1px 2px rgba(179, 0, 89, 0.5);
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2em;
+      max-width: 280px;
+      line-height: 1.4;
+      z-index: 1;
+      position: relative;
+      text-shadow: 0 1px 2px rgba(179, 0, 89, 0.4);
+    }
+
+    button {
+      background-color: #ff69b4;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
+      user-select: none;
+      z-index: 1;
+      position: relative;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.7);
+    }
+
+    @media (max-width: 360px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+        max-width: 220px;
+      }
+      button {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-gif"></div>
+
+  <h1>Happy Birthday Mou! 🎉</h1>
+  <p>Get ready for a special surprise crafted just for you.</p>
+  <button id="startBtn">Start the Surprise</button>
+
+  <script>
+    document.getElementById('startBtn').addEventListener('click', () => {
+      window.location.href = 'puzzle.html';
+    });
+  </script>
+</body>
+</html>
